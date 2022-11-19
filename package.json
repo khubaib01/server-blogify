@@ -1,0 +1,25 @@
+{
+  "name": "api-blogify",
+  "version": "1.0.0",
+  "description": "backend for my blog",
+  "main": "index.js",
+  "author": "tamimMuhammad <mmmtamim@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.6",
+    "zod": "^3.17.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

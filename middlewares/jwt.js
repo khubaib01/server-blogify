@@ -1,0 +1,13 @@
+import jwt from "jsonwebtoken";
+
+export function jwtVerify(req, res, next) {
+  const { authorization } = req.headers;
+  try {
+    const token = authorization?.split(" ")[1];
+    const decoded = jwt.verify(String(token), String(process.env.JWT_SECRET));
+    req.userId = decoded;
+    next();
+  } catch {
+    next("authentication failure");
+  }
+}
