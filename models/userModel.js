@@ -3,17 +3,20 @@ import bcrypt from "bcrypt";
 
 const userSchema = new Schema(
   {
-    name: {
-      type: String,
-    },
     email: {
       type: String,
       unique: true,
       required: true,
     },
+    handle: {
+      type: String,
+      unique:true,
+      required:true
+    },
     password: {
       type: String,
       required: true,
+      
     },
     avatar: {
       type: String,

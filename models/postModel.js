@@ -15,6 +15,17 @@ const postSchema = new Schema(
         type: String,
       },
     ],
+    likes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"User",
+      },
+    ],
+    unlikes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+      },
+    ],
     private: {
       type: Boolean,
       default: false,
